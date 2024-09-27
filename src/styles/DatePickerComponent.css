@@ -1,0 +1,155 @@
+/* src/styles/DatePickerComponent.css */
+
+.date-picker-container {
+    background-color: #222222;
+    border-radius: 0.5rem;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.9);
+    padding: 2rem;
+    color: #f5f5f5;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Header with high contrast */
+.date-picker-header {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: #ffcc00; /* Consider using one accent color for consistency */
+    text-align: center;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Input and Select Styles */
+.date-picker-label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+.date-picker-select,
+.date-picker-input {
+    background-color: #333333;
+    border: 1px solid #666;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    color: #ffffff;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    animation: slideIn 0.5s ease;
+}
+
+.date-picker-select:focus,
+.date-picker-input:focus {
+    outline: none;
+    border-color: #ffcc00;
+    background-color: #444444;
+    animation: scaleUp 0.3s ease;
+}
+
+.date-picker-select:hover,
+.date-picker-input:hover {
+    background-color: #444444;
+    animation: pulse 0.5s infinite;
+}
+
+/* Preview Section */
+.preview-container {
+    background-color: #282828;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.7);
+    animation: fadeInUp 0.5s ease;
+}
+
+.preview-header {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #ffcc00;
+    text-align: center;
+    animation: bounceIn 0.5s ease;
+}
+
+.preview-text {
+    color: #e0e0e0;
+    text-align: center;
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+/* Button Styles */
+.button {
+    background-color: #ffcc00; /* Primary button color */
+    color: #222222;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 100%;
+    margin-top: 1.5rem;
+    animation: fadeIn 0.5s ease;
+}
+
+.button:hover {
+    background-color: #e0b800; /* Darker on hover */
+    transform: scale(1.05);
+    animation: shake 0.3s ease;
+}
+
+/* Additional animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0); opacity: 0; }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes scaleUp {
+    from { transform: scale(1); }
+    to { transform: scale(1.05); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+/* Specific Days Header */
+h3 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    background-color: #2c2c2c;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+/* Button styles for specific days */
+button {
+    font-size: 1rem;
+}
